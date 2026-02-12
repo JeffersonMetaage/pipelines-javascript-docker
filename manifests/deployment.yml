@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jeffersonmetaagepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jeffersonmetaagepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jeffersonmetaagepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jeffersonmetaagepipelinesjavascriptdocker 
+          image: demoacr20260212.azurecr.io/jeffersonmetaagepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
